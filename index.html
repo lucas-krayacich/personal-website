@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lucas Krayacich - ML Engineer building intelligent systems for medical diagnostics">
+  <title>Lucas Krayacich | ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">LK</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-title">Lucas Krayacich</h1>
+      <p class="hero-subtitle">Machine Learning Engineer crafting computer vision systems for medical diagnostics. Based in Vancouver, driven by curiosity.</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn btn-primary">Learn More</a>
+        <a href="#projects" class="btn btn-secondary">View Work</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-main">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+              <p class="about-lead">
+                I'm a machine learning engineer focused on building computer vision systems that make a real difference in healthcare.
+              </p>
+              <p class="about-text">
+                Currently at Light AI in Vancouver, I work on training and deploying models for medical diagnostics, with a particular focus on explainability and robust pipeline development. Previously, I've built RAG-powered document systems at AltaML and RPA solutions at EY.
+              </p>
+              <p class="about-text">
+                I hold a B.A.Sc. in Computer Engineering from Queen's University. Outside of work, I'm usually found in the mountains—skiing, climbing, or running trails. I've been fortunate to explore over 25 countries, and I'm always planning the next adventure.
+              </p>
+            </div>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-count="29">0</span>
+                <span class="stat-label">Countries Visited</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="4">0</span>
+                <span class="stat-label">Continents Explored</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years in ML</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="map-container">
+              <div id="world-map" class="world-map"></div>
+              <p class="map-caption">Places I've explored</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="photo-gallery-section">
+          <div class="photo-gallery-wrapper">
+            <div class="photo-gallery" id="photo-gallery">
+              <div class="photo-item">
+                <img src="bio_assets/pictures/IMG_9419.jpg" alt="Adventure photo" loading="lazy">
+              </div>
+              <div class="photo-item">
+                <img src="bio_assets/pictures/DSC_7131.JPG" alt="Adventure photo" loading="lazy">
+              </div>
+              <div class="photo-item">
+                <img src="bio_assets/pictures/IMG_0334.JPG" alt="Adventure photo" loading="lazy">
+              </div>
+              <div class="photo-item">
+                <img src="bio_assets/pictures/0031_5.JPG" alt="Adventure photo" loading="lazy">
+              </div>
+              <div class="photo-item">
+                <img src="bio_assets/pictures/IMG_0354.JPG" alt="Adventure photo" loading="lazy">
+              </div>
+              <!-- Duplicate for infinite scroll effect -->
+              <div class="photo-item">
+                <img src="bio_assets/pictures/IMG_9419.jpg" alt="Adventure photo" loading="lazy">
+              </div>
+              <div class="photo-item">
+                <img src="bio_assets/pictures/DSC_7131.JPG" alt="Adventure photo" loading="lazy">
+              </div>
+              <div class="photo-item">
+                <img src="bio_assets/pictures/IMG_0334.JPG" alt="Adventure photo" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="gallery-fade gallery-fade-left"></div>
+          <div class="gallery-fade gallery-fade-right"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Medical CV Pipeline</h3>
+              <p class="project-description">Computer vision models for medical diagnostics with a focus on model explainability and robust pipeline development.</p>
+              <div class="project-tech">
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">Computer Vision</span>
+              </div>
+            </div>
+            <div class="project-link">
+              <span class="project-company">Light AI Inc.</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">RAG Document Search</h3>
+              <p class="project-description">Searchable and interactive database of reports dating back 50 years using Generative AI and RAG. Streamlined 25-40% of client working hours.</p>
+              <div class="project-tech">
+                <span class="tech-tag">LLMs</span>
+                <span class="tech-tag">RAG</span>
+                <span class="tech-tag">Python</span>
+              </div>
+            </div>
+            <div class="project-link">
+              <span class="project-company">AltaML</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Pipeline Digital Twins</h3>
+              <p class="project-description">Created Digital Twins of client pipeline networks. Published research paper on automation and digitization in the pipeline industry.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Digital Twins</span>
+                <span class="tech-tag">Simulation</span>
+                <span class="tech-tag">Research</span>
+              </div>
+            </div>
+            <div class="project-link">
+              <span class="project-company">Cenozon Inc.</span>
+              <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">RPA Automation Suite</h3>
+              <p class="project-description">Robotic Process Automation solution for a major energy corporation. Saved roughly 1000 hours of yearly manual calculations.</p>
+              <div class="project-tech">
+                <span class="tech-tag">RPA</span>
+                <span class="tech-tag">Automation</span>
+                <span class="tech-tag">Database</span>
+              </div>
+            </div>
+            <div class="project-link">
+              <span class="project-company">EY</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="section resume" id="resume">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="resume-grid">
+          <div class="resume-main">
+            <h3 class="resume-section-title">Experience</h3>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4 class="timeline-title">Machine Learning Engineer</h4>
+                    <span class="timeline-date">Sept 2024 - Present</span>
+                  </div>
+                  <p class="timeline-company">Light AI Inc. <span class="timeline-location">Vancouver, BC</span></p>
+                  <p class="timeline-description">Training computer vision models in PyTorch and TensorFlow frameworks for medical diagnostics, with a focus on model explainability and pipeline development.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4 class="timeline-title">Data Science Intern</h4>
+                    <span class="timeline-date">Feb 2024 - Sept 2024</span>
+                  </div>
+                  <p class="timeline-company">Light AI Inc. <span class="timeline-location">Vancouver, BC</span></p>
+                  <p class="timeline-description">Developed a quality assurance classification model to filter down to images useful for diagnosis.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4 class="timeline-title">Associate Machine Learning Developer</h4>
+                    <span class="timeline-date">May 2023 - Oct 2023</span>
+                  </div>
+                  <p class="timeline-company">AltaML <span class="timeline-location">Calgary, AB</span></p>
+                  <p class="timeline-description">Using Generative AI and RAG, aided in the design of a searchable and interactive database of reports dating back 50 years. Streamlined 25-40% of client working hours by automating the document retrieval process.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4 class="timeline-title">Technology Consultant</h4>
+                    <span class="timeline-date">May 2022 - Aug 2022</span>
+                  </div>
+                  <p class="timeline-company">EY <span class="timeline-location">Calgary, AB</span></p>
+                  <p class="timeline-description">Designed and delivered a successful Robotic Process Automation solution for a major energy corporation. Saved roughly 1000 hours of yearly manual calculations.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4 class="timeline-title">Engineering Intern</h4>
+                    <span class="timeline-date">May 2021 - Aug 2021</span>
+                  </div>
+                  <p class="timeline-company">Cenozon Inc. <span class="timeline-location">Calgary, AB</span></p>
+                  <p class="timeline-description">Created Digital Twins of client pipeline networks and published a paper on automation in the pipeline industry.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-sidebar">
+            <div class="resume-block">
+              <h3 class="resume-section-title">Education</h3>
+              <div class="education-item">
+                <h4 class="education-degree">Bachelor of Applied Science</h4>
+                <p class="education-field">Computer Engineering</p>
+                <p class="education-school">Queen's University</p>
+                <p class="education-date">2020 - 2024</p>
+              </div>
+            </div>
+
+            <div class="resume-block">
+              <h3 class="resume-section-title">Skills</h3>
+              <div class="skills-list">
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Core ML</span>
+                <span class="skill-tag">LiteRT</span>
+                <span class="skill-tag">Azure Custom Vision</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">RAG</span>
+                <span class="skill-tag">LLMs</span>
+              </div>
+            </div>
+
+            <div class="resume-block">
+              <h3 class="resume-section-title">Certifications</h3>
+              <ul class="certifications-list">
+                <li>Microsoft Azure Fundamentals</li>
+                <li>SQL for Data Analysis</li>
+                <li>Python for Data Science and ML</li>
+              </ul>
+            </div>
+
+            <div class="resume-block">
+              <h3 class="resume-section-title">Awards</h3>
+              <p class="award-item">Queen's University Excellence Scholarship</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing Section -->
+    <section class="section writing" id="writing">
+      <div class="container">
+        <h2 class="section-title">Writing</h2>
+        <div class="writing-content">
+          <div class="articles-grid">
+            <article class="featured-article">
+              <div class="article-badge">Medium</div>
+              <div class="article-content">
+                <h3 class="article-title">Learning Fast with NotebookLM</h3>
+                <p class="article-excerpt">Exploring techniques to accelerate learning using Google's AI-powered research assistant.</p>
+                <a href="https://medium.com/@lucas.krayacich/learning-fast-with-notebooklm-c70076396a92" class="article-link" target="_blank" rel="noopener noreferrer">
+                  Read Article
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </article>
+            <article class="featured-article">
+              <div class="article-badge">Energy Now Magazine</div>
+              <div class="article-content">
+                <h3 class="article-title">The Impact of Automation & Digitization on the Pipeline Industry</h3>
+                <p class="article-excerpt">How digital transformation and cloud-based systems can revolutionize pipeline operations, reduce inefficiencies, and improve safety outcomes.</p>
+                <a href="https://energynow.ca/2021/06/cenozon-the-impact-of-automation-digitization-on-the-pipeline-industry/" class="article-link" target="_blank" rel="noopener noreferrer">
+                  Read Article
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="writing-cta">
+            <a href="https://medium.com/@lucas.krayacich" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              View more on Medium
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-intro">Interested in collaborating or just want to connect? I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a href="mailto:lucas.krayacich@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Email</span>
+          </a>
+          <a href="https://github.com/lucas-krayacich" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/lucas-krayacich-67a4a71b1/" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://medium.com/@lucas.krayacich" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+            </svg>
+            <span>Medium</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Lucas Krayacich</p>
+    </div>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
